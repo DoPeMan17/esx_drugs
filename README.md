@@ -1,4 +1,4 @@
-Posted on behalf of @GiZz, the developer of ESX (ES Extended).
+
 
 [Requirements]:
 
