@@ -9,14 +9,14 @@ esx_policejob: [https://github.com/FXServer-ESX/fxserver-esx_policejob ](https:/
 
 [Features]:
 
--Illegal job opportunities await!
-- I changed ESX_Drugs and added a lot of features like more drugs and licenses for the money wash and the money wash itself
--Marijuana/Coke/Meth/Lsd/Heroin as Farms
--Gather -> Package/Process -> Sales!
--Optinal you can make MoneyWash License
--Gives dirty money to purchase illegal goods with
--Police can see or interact with the drug zones
--Multi-language support (en, es)
+1. -Illegal job opportunities await!
+2. -I changed ESX_Drugs and added a lot of features like more drugs and licenses for the money wash and the money wash itself
+3. -Marijuana/Coke/Meth/Lsd/Heroin as Farms
+4. -Gather -> Package/Process -> Sales!
+5. -Optinal you can make MoneyWash License
+6. -Gives dirty money to purchase illegal goods with
+7. -Police can see or interact with the drug zones
+8. -Multi-language support (en, es)
 
 [Installation]:
 
