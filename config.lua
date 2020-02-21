@@ -1,6 +1,6 @@
 Config = {}
 
-Config.Locale = 'en'
+Config.Locale = 'br'
 
 Config.Delays = {
 	WeedProcessing = 1000 * 10,
@@ -26,8 +26,9 @@ Config.ChemicalsConvertionItems = {
 	lsa = 0,
 }
 
-Config.ChemicalsLicenseEnabled = false --Will Enable or Disable the need for a Chemicals License.
-Config.MoneyWashLicenseEnabled = false --Will Enable or Disable the need for a MoneyWash License.
+Config.ChemicalsLicenseEnabled = true --Will Enable or Disable the need for a Chemicals License.
+Config.MoneyWashLicenseEnabled = true --Will Enable or Disable the need for a MoneyWash License.
+Config.LicenseEnable = true
 
 Config.LicensePrices = {
 	weed_processing = {label = _U('license_weed'), price = 15000}
@@ -61,7 +62,7 @@ Config.CircleZones = {
 	
 	--LSD
 	lsdProcessing = {coords = vector3(91.26, 3749.31, 40.77), name = _U('blip_lsdprocessing'),color = 25, sprite = 496, radius = 20.0},
-	thionylchlorideProcessing = {coords = vector3(1903.98, 4922.70, 48.16), name = _U('blip_lsdprocessing'),color = 25, sprite = 496, radius = 20.0},
+	thionylchlorideProcessing = {coords = vector3(1903.98, 4922.70, 48.16), name = _U('blip_thionylchlorideprocessing'),color = 25, sprite = 496, radius = 20.0},
 	
 	--Heroin
 	HeroinField = {coords = vector3(16.34, 6875.94, 12.64), name = _U('blip_heroinfield'), color = 25, sprite = 496, radius = 20},
@@ -71,8 +72,8 @@ Config.CircleZones = {
 	DrugDealer = {coords = vector3(-1172.02, -1571.98, 4.66), name = _U('blip_drugdealer'), color = 6, sprite = 378, radius = 25.0},
 	
 	--License
-	LicenseShop = {coords = vector3(707.17, -962.5, 30.4), name = _U('blip_lsdprocessing'),color = 25, sprite = 496, radius = 20.0},
+	LicenseShop = {coords = vector3(707.17, -962.5, 30.4), name = _U('blip_licenseshop'),color = 25, sprite = 496, radius = 20.0},
 	
 	--MoneyWash
-	MoneyWash = {coords = vector3(8.84, -1103.8, -29.8), name = _U('blip_drugdealer'), color = 6, sprite = 378, radius = 25.0},
+	MoneyWash = {coords = vector3(245.62, -1967.32, 21.96), name = _U('blip_moneywash'), color = 6, sprite = 378, radius = 25.0},
 }
