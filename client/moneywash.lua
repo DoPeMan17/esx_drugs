@@ -20,7 +20,7 @@ Citizen.CreateThread(function()
 					end
 				end
 			else
-				Citizen.Wait(500)
+				Citizen.Wait(0)
 			end
 		--[[else
 			if wasOpen then

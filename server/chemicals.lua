@@ -4,8 +4,8 @@ RegisterServerEvent('esx_illegal:pickedUpChemicals')
 AddEventHandler('esx_illegal:pickedUpChemicals', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
 	local xItem = xPlayer.getInventoryItem('chemicals')
-
-	if xItem.limit ~= -1 and (xItem.count + 1) > xItem.limit then
+	
+	if not xPlayer.canCarryItem('chemicals', xItem.count + 1) then
 		TriggerClientEvent('esx:showNotification', _source, _U('Chemicals_inventoryfull'))
 	else
 		xPlayer.addInventoryItem(xItem.name, 1)
