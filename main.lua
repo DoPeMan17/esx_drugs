@@ -168,7 +168,7 @@ Citizen.CreateThread(function()
 	if Config.EnableMapsBlimps then
 		for k,zone in pairs(Config.CircleZones) do
 			if zone.enabled then
-				CreateBlipCircle(zone.blimpcoords, zone.name, zone.radius, zone.color, zone.sprite)
+				CreateBlipCircle(zone.coords, zone.name, zone.radius, zone.color, zone.sprite)
 			end
 		end
 	end

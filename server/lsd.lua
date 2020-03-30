@@ -9,16 +9,18 @@ AddEventHandler('esx_illegal:processLSD', function()
 			local xPlayer = ESX.GetPlayerFromId(_source)
 			local xLSA, xThionylChloride, xLSD = xPlayer.getInventoryItem('lsa'), xPlayer.getInventoryItem('thionyl_chloride'), xPlayer.getInventoryItem('lsd')
 
-			if xLSD.limit ~= -1 and (xLSD.count + 1) > xLSD.limit then
-				TriggerClientEvent('esx:showNotification', _source, _U('lsd_processingfull'))
-			elseif xLSA.count < 1 and xThionylChloride.count < 1 then
-				TriggerClientEvent('esx:showNotification', _source, _U('lsd_processingenough'))
-			else
-				xPlayer.removeInventoryItem('lsa', 1)
-				xPlayer.removeInventoryItem('thionyl_chloride', 1)
-				xPlayer.addInventoryItem('lsd', 1)
+			if xLSA.count > 0 and xThionylChloride.count > 0 then
+				if xPlayer.canSwapItem('lsa', 1, 'lsd', 1) and xPlayer.canSwapItem('thionyl_chloride', 1, 'lsd', 1) then
+					xPlayer.removeInventoryItem('lsa', 1)
+					xPlayer.removeInventoryItem('thionyl_chloride', 1)
+					xPlayer.addInventoryItem('lsd', 1)
 
-				TriggerClientEvent('esx:showNotification', _source, _U('lsd_processed'))
+					xPlayer.showNotification(_U('lsd_processed'))
+				else
+					xPlayer.showNotification(_U('lsd_processingfull'))
+				end
+			else
+				xPlayer.showNotification(_U('lsd_processingenough'))
 			end
 
 			playersProcessingLSD[_source] = nil
@@ -37,16 +39,18 @@ AddEventHandler('esx_illegal:processThionylChloride', function()
 			local xPlayer = ESX.GetPlayerFromId(_source)
 			local xLSA, xChemicals, xThionylChloride = xPlayer.getInventoryItem('lsa'), xPlayer.getInventoryItem('chemicals'), xPlayer.getInventoryItem('thionyl_chloride')
 
-			if xThionylChloride.limit ~= -1 and (xThionylChloride.count + 1) > xThionylChloride.limit then
-				TriggerClientEvent('esx:showNotification', _source, _U('thionylchloride_processingfull'))
-			elseif xLSA.count < 1 or xChemicals.count < 1 then
-				TriggerClientEvent('esx:showNotification', _source, _U('thionylchloride_processingenough'))
-			else
-				xPlayer.removeInventoryItem('lsa', 1)
-				xPlayer.removeInventoryItem('chemicals', 1)
-				xPlayer.addInventoryItem('thionyl_chloride', 1)
+			if xLSA.count > 0 and xChemicals.count > 0 then
+				if xPlayer.canSwapItem('lsa', 1, 'thionyl_chloride', 1) and xPlayer.canSwapItem('chemicals', 1, 'thionyl_chloride', 1) then
+					xPlayer.removeInventoryItem('lsa', 1)
+					xPlayer.removeInventoryItem('chemicals', 1)
+					xPlayer.addInventoryItem('thionyl_chloride', 1)
 
-				TriggerClientEvent('esx:showNotification', _source, _U('thionylchloride_processed'))
+					xPlayer.showNotification(_U('thionylchloride_processed'))
+				else
+					xPlayer.showNotification(_U('thionylchloride_processingfull'))
+				end
+			else
+				xPlayer.showNotification(_U('thionylchloride_processingenough'))
 			end
 
 			playersProcessingLSD[_source] = nil

@@ -3,12 +3,11 @@ local playersProcessingCocaLeaf = {}
 RegisterServerEvent('esx_illegal:pickedUpCocaLeaf')
 AddEventHandler('esx_illegal:pickedUpCocaLeaf', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
-	local xItem = xPlayer.getInventoryItem('coca_leaf')
 
-	if xItem.limit ~= -1 and (xItem.count + 1) > xItem.limit then
-		TriggerClientEvent('esx:showNotification', _source, _U('coca_leaf_inventoryfull'))
+	if xPlayer.canCarryItem('coca_leaf', 1) then
+		xPlayer.addInventoryItem('coca_leaf', 1)
 	else
-		xPlayer.addInventoryItem(xItem.name, 1)
+		xPlayer.showNotification(_U('coca_leaf_inventoryfull'))
 	end
 end)
 
@@ -21,15 +20,17 @@ AddEventHandler('esx_illegal:processCocaLeaf', function()
 			local xPlayer = ESX.GetPlayerFromId(_source)
 			local xCocaLeaf, xCoke = xPlayer.getInventoryItem('coca_leaf'), xPlayer.getInventoryItem('coke')
 
-			if xCoke.limit ~= -1 and (xCoke.count + 1) > xCoke.limit then
-				TriggerClientEvent('esx:showNotification', _source, _U('coke_processingfull'))
-			elseif xCocaLeaf.count < 3 then
-				TriggerClientEvent('esx:showNotification', _source, _U('coke_processingenough'))
-			else
-				xPlayer.removeInventoryItem('coca_leaf', 3)
-				xPlayer.addInventoryItem('coke', 1)
+			if xCocaLeaf.count > 3 then
+				if xPlayer.canSwapItem('coca_leaf', 3, 'coke', 1) then
+					xPlayer.removeInventoryItem('coca_leaf', 3)
+					xPlayer.addInventoryItem('coke', 1)
 
-				TriggerClientEvent('esx:showNotification', _source, _U('coke_processed'))
+					xPlayer.showNotification(_U('coke_processed'))
+				else
+					xPlayer.showNotification(_U('coke_processingfull'))
+				end
+			else
+				xPlayer.showNotification(_U('coke_processingenough'))
 			end
 
 			playersProcessingCocaLeaf[_source] = nil

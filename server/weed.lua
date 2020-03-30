@@ -3,12 +3,11 @@ local playersProcessingCannabis = {}
 RegisterServerEvent('esx_illegal:pickedUpCannabis')
 AddEventHandler('esx_illegal:pickedUpCannabis', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
-	local xItem = xPlayer.getInventoryItem('cannabis')
 
-	if xItem.limit ~= -1 and (xItem.count + 1) > xItem.limit then
-		TriggerClientEvent('esx:showNotification', _source, _U('weed_inventoryfull'))
+	if xPlayer.canCarryItem('cannabis', 1) then
+		xPlayer.addInventoryItem('cannabis', 1)
 	else
-		xPlayer.addInventoryItem(xItem.name, 1)
+		xPlayer.showNotification(_U('weed_inventoryfull'))
 	end
 end)
 
@@ -19,17 +18,19 @@ AddEventHandler('esx_illegal:processCannabis', function()
 
 		playersProcessingCannabis[_source] = ESX.SetTimeout(Config.Delays.WeedProcessing, function()
 			local xPlayer = ESX.GetPlayerFromId(_source)
-			local xCannabis, xMarijuana = xPlayer.getInventoryItem('cannabis'), xPlayer.getInventoryItem('marijuana')
+			local xCannabis = xPlayer.getInventoryItem('cannabis')
 
-			if xMarijuana.limit ~= -1 and (xMarijuana.count + 1) > xMarijuana.limit then
-				TriggerClientEvent('esx:showNotification', _source, _U('weed_processingfull'))
-			elseif xCannabis.count < 2 then
-				TriggerClientEvent('esx:showNotification', _source, _U('weed_processingenough'))
+			if xCannabis.count > 3 then
+				if xPlayer.canSwapItem('cannabis', 3, 'marijuana', 1) then
+					xPlayer.removeInventoryItem('cannabis', 3)
+					xPlayer.addInventoryItem('marijuana', 1)
+
+					xPlayer.showNotification(_U('weed_processed'))
+				else
+					xPlayer.showNotification(_U('weed_processingfull'))
+				end
 			else
-				xPlayer.removeInventoryItem('cannabis', 2)
-				xPlayer.addInventoryItem('marijuana', 1)
-
-				TriggerClientEvent('esx:showNotification', _source, _U('weed_processed'))
+				xPlayer.showNotification(_U('weed_processingenough'))
 			end
 
 			playersProcessingCannabis[_source] = nil
