@@ -3,6 +3,7 @@ local playersProcessingPoppyResin = {}
 RegisterServerEvent('esx_illegal:pickedUpPoppy')
 AddEventHandler('esx_illegal:pickedUpPoppy', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
+	local _source = source
 
 	if xPlayer.canCarryItem('poppyresin', 1) then
 		xPlayer.addInventoryItem('poppyresin', 1)

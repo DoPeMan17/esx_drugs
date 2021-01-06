@@ -3,6 +3,7 @@ local playersProcessingCocaLeaf = {}
 RegisterServerEvent('esx_illegal:pickedUpCocaLeaf')
 AddEventHandler('esx_illegal:pickedUpCocaLeaf', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
+	local _source = source
 
 	if xPlayer.canCarryItem('coca_leaf', 1) then
 		xPlayer.addInventoryItem('coca_leaf', 1)

@@ -3,6 +3,7 @@ local playersProcessingCannabis = {}
 RegisterServerEvent('esx_illegal:pickedUpCannabis')
 AddEventHandler('esx_illegal:pickedUpCannabis', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
+	local _source = source
 
 	if xPlayer.canCarryItem('cannabis', 1) then
 		xPlayer.addInventoryItem('cannabis', 1)
