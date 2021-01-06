@@ -3,6 +3,7 @@ local playersProcessingMeth = {}
 RegisterServerEvent('esx_illegal:pickedUpHydrochloricAcid')
 AddEventHandler('esx_illegal:pickedUpHydrochloricAcid', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
+	local _source = source
 
 	if xPlayer.canCarryItem('hydrochloric_acid', 1) then
 		xPlayer.addInventoryItem('hydrochloric_acid', 1)
@@ -14,6 +15,7 @@ end)
 RegisterServerEvent('esx_illegal:pickedUpSodiumHydroxide')
 AddEventHandler('esx_illegal:pickedUpSodiumHydroxide', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
+	local _source = source
 
 	if xPlayer.canCarryItem('sodium_hydroxide', 1) then
 		xPlayer.addInventoryItem('sodium_hydroxide', 1)
@@ -25,6 +27,7 @@ end)
 RegisterServerEvent('esx_illegal:pickedUpSulfuricAcid')
 AddEventHandler('esx_illegal:pickedUpSulfuricAcid', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
+        local _source = source
 
 	if xPlayer.canCarryItem('sulfuric_acid', 1) then
 		xPlayer.addInventoryItem('sulfuric_acid', 1)
