@@ -3,6 +3,7 @@ local playersProcessingChemicalsToHydrochloricAcid = {}
 RegisterServerEvent('esx_illegal:pickedUpChemicals')
 AddEventHandler('esx_illegal:pickedUpChemicals', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
+	local _source = source
 
 	if xPlayer.canCarryItem('chemicals', 1) then
 		xPlayer.addInventoryItem('chemicals', 1)
@@ -16,9 +17,10 @@ AddEventHandler('esx_illegal:ChemicalsConvertionMenu', function(itemName, amount
 	local xPlayer = ESX.GetPlayerFromId(source)
 	local xItem = xPlayer.getInventoryItem(itemName)
 	local xChemicals = xPlayer.getInventoryItem('chemicals')
+	local _source = source
 
 	if xChemicals.count < amount then
-		TriggerClientEvent('esx:showNotification', source, _U('Chemicals_notenough', xItem.label))
+		TriggerClientEvent('esx:showNotification', _source, _U('Chemicals_notenough', xItem.label))
 		return
 	end
 	
