@@ -40,7 +40,7 @@ Config.Licenses = {
 
 Config.GiveBlack = true -- give black money? if disabled it'll give regular cash.
 
-Config.EnableMapsBlimps = true -- Enables the blimps on the map.
+Config.EnableMapsBlimps = false -- Enables the blimps on the map.
 
 Config.CircleZones = {
 	--Weed
