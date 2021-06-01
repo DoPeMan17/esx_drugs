@@ -1,0 +1,115 @@
+Locales ['fr'] = {
+  -- weed
+  ['weed_pickupprompt'] = "appuyez sur ~INPUT_CONTEXT~ pour récolter du ~g~Cannabis~s~.",
+  ['weed_inventoryfull'] = "vous n'avez plus de place pour récolter plus de ~g~Cannabis~s~.",
+  ['weed_processprompt'] = "appuyez sur ~INPUT_CONTEXT~ pour transformer le ~g~Process Cannabis~s~.",
+  ['weed_processingstarted'] = "transformation du ~g~Cannabis~s~ en ~g~Marijuana~s~...",
+  ['weed_processingfull'] = "transformation ~r~annulée~s~ car votre inventaire est plein !",
+  ['weed_processingenough'] = "vous devez avoir ~b2x~s~ ~g~Cannabis~s~ pour transformer.",
+  ['weed_processed'] = "vous avez transformé ~b~2x~s~ ~g~Cannabis~s~ en ~b~1x~s~ ~g~Marijuana~s~",
+  ['weed_processingtoofar'] = "le traitement à été ~r~annulé~s~ car vous avez quitté la zone.",
+  
+  -- meth
+  ['HydrochloricAcid_pickupprompt'] = "appuyez sur ~INPUT_CONTEXT~ pour récolter un baril d'~g~Acide HydroChloric~s~.",
+  ['SulfuricAcid_pickupprompt'] = "appuyez sur ~INPUT_CONTEXT~ pour récolter un baril de d'~g~Acide Sulfuric~s~.",
+  ['SodiumHydroxide_pickupprompt'] = "appuyez sur ~INPUT_CONTEXT~ pour récolter un baril d'~g~Hydroxide de Sodium~s~.",
+  ['HydrochloricAcid_inventoryfull'] = "vous n'avez plus de place pour récolter plus d'~g~Acide HydroChlorique~s~.",
+  ['SulfuricAcid_inventoryfull'] = "vous n'avez plus de place pour récolter plus d'~g~Acide Sulfuric~s~.",
+  ['sodium_hydroxide_inventoryfull'] = "vous n'avez plus de place pour récolter plus d'~g~Hydroxide de Sodium~s~.",
+  ['meth_processprompt'] = "appuyez sur ~INPUT_CONTEXT~ pour transformer la ~g~Meth~s~.",
+  ['meth_processingstarted'] = "transformation en ~g~Meth~s~...",
+  ['meth_processingfull'] = "transformation ~r~annulée~s~ car votre inventaire est plein !",
+  ['meth_processingenough'] = "vous devez avoir ~b~1x~s~ de chaque composant pour transformer.",
+  ['meth_processed'] = "vous avez transformé ~b~1x~s~ ~g~Meth~s~",
+  ['meth_processingtoofar'] = "le traitement à été ~r~annulé~s~ car vous avez quitté la zone.",
+  
+  -- coke
+  ['coke_pickupprompt'] = "appuyez sur ~INPUT_CONTEXT~ pour récolter une ~g~Feuille de Coca~s~.",
+  ['coke_inventoryfull'] = "vous n'avez plus de place pour récolter plus de ~g~Feuilles de Coca~s~.",
+  ['coke_processprompt'] = "appuyez sur ~INPUT_CONTEXT~ pour transformer en ~g~Cocaïne~s~.",
+  ['coke_processingstarted'] = "transformation en ~g~Cocaïne~s~...",
+  ['coke_processingfull'] = "transformation ~r~annulée~s~ car votre inventaire est plein !",
+  ['coke_processingenough'] = "vous devez avoir ~b~3x~s~ ~g~Feuilles de Coca~s~ pour transformer.",
+  ['coke_processed'] = "vous avez transformé ~b~1x~s~ ~g~Cocaïne~s~",
+  ['coke_processingtoofar'] = "le traitement à été ~r~annulé~s~ car vous avez quitté la zone.",
+  
+  -- lsd
+  ['lsd_processingstarted'] = "transformation en ~g~LSD~s~...",
+  ['lsd_processingfull'] = "transformation ~r~annulée~s~ car votre inventaire est plein !",
+  ['lsd_processprompt'] = "appuyez sur ~INPUT_CONTEXT~ pour transformer en ~g~LSD~s~.",
+  ['lsd_processingenough'] = "vous devez avoir ~b~1x~s~ ~g~LSA~s~ et ~b~1x~s~ ~g~Chlorure de thionyle~s~ pour transformer.",
+  ['lsd_processed'] = "vous avez transformé ~b~1x~s~ ~g~LSD~s~",
+  ['lsd_processingtoofar'] = "le traitement à été ~r~annulé~s~ car vous avez quitté la zone.",
+  
+  ['thionylchloride_processingstarted'] = "transformation ~g~Chlorure de thionyle~s~...",
+  ['thionylchloride_processingfull'] = "transformation ~r~annulée~s~ car votre inventaire est plein !",
+  ['thionylchloride_processprompt'] = "appuyez sur ~INPUT_CONTEXT~ pour transformer to ~g~Process Chlorure de thionyle~s~.",
+  ['thionylchloride_processingenough'] = "vous devez avoir ~b~1x~s~ ~g~LSA~s~ and ~b~1x~s~ ~g~Produits chimiques~s~ pour transformer.",
+  ['thionylchloride_processed'] = "vous avez transformé ~b~1x~s~ ~g~Chlorure de thionyle~s~",
+  ['thionylchloride_processingtoofar'] = "le traitement à été ~r~annulé~s~ car vous avez quitté la zone.",
+  
+   -- heroin
+  ['heroin_pickupprompt'] = "appuyez sur ~INPUT_CONTEXT~ pour récolter de la ~g~Résine de Pavot~s~.",
+  ['poppy_inventoryfull'] = "vous n'avez plus de place pour récolter plus de ~g~Résine de Pavot~s~.",
+  ['heroin_inventoryfull'] = "vous n'avez plus de place pour récolter plus d'~g~Héroïne~s~.",
+  ['heroin_processprompt'] = "appuyez sur ~INPUT_CONTEXT~ pour transformer en ~g~Héroïne~s~.",
+  ['heroin_processingstarted'] = "transformation ~g~Résine de Pavot~s~ en ~g~Héroïne~s~...",
+  ['heroin_processingfull'] = "transformation ~r~annulée~s~ car votre inventaire est plein !",
+  ['heroin_processingenough'] = "vous devez avoir ~b~1x~s~ ~g~Résine de Pavot~s~ pour transformer.",
+  ['heroin_processed'] = "vous avez transformé ~b~1x~s~ ~g~Héroïne~s~",
+  ['heroin_processingtoofar'] = "le traitement à été ~r~annulé~s~ car vous avez quitté la zone.",
+  
+  -- chemicals
+  ['chemicals_pickupprompt'] = "appuyez sur ~INPUT_CONTEXT~ chercher des ~g~Produits chimiques~s~",
+  ['chemicals_inventoryfull'] = "vous n'avez plus de place pour récolter plus de ~g~Produits chimiques~s~.",
+  ['Chemicals_notenough'] = "vous n'avez plus de ~g~Produits chimiques~s~ à transformer.",
+  ['Chemicals_made'] = "vous avez créé ~b~1x~s~ ~y~%s~s~",
+  ['chemicals_prompt'] = "appuyez sur ~INPUT_CONTEXT~ pour convertir des ~r~Produits chimiques~s~.",
+  ['ChemicalsConvertion_title'] = "Transformation des produits chimiques",
+  ['chemicals_making'] = "~g~Mélange...~s~",
+  
+  -- drug dealer
+  ['dealer_prompt'] = "appuyez sur ~INPUT_CONTEXT~ pour parler avec le ~r~Dealer de drogue~s~.",
+  ['dealer_title'] = "Dealer de drogue",
+  ['dealer_item'] = "$%s",
+  ['dealer_notenough'] = "vous n'en avez pas assez pour en vendre !",
+  ['dealer_sold'] = "vous avez vendu ~b~%sx~s~ ~y~%s~s~ pour ~g~$%s~s~",
+
+  -- license
+  ['license_title'] = "vous devez posseder une license de transformation pour ce produit, vous pouvez l'acheter ici.",
+  ['license_no'] = "Non",
+  ['license_bought'] = "vous avez acheté la license ~b~%s~s~ pour ~r~$%s~s~",
+  ['license_bought_fail'] = "pas assez d'argent pour ~b~%s~s~ !",
+  ['license_weed'] = "License de transformation du Canabis",
+  ['license_meth'] = "License de transformation de la Meth",
+  ['need_license'] = "Vous avez besoin d'une license.",
+  ['licenseshop_title'] = "Licenses",
+  ['licenseshop_prompt'] = "appuyez sur ~INPUT_CONTEXT~ pour voir les ~g~Licenses~s~ en vente.",
+  ['license_bought'] = "vous avez acheté ~b~1x~s~ ~y~%s~s~ pour ~g~$%s~s~",
+  ['license_inventoryfull'] = "vous avez déjà cette license.",
+  
+  -- moneywash
+  ['moneywash_washed'] = "vous avez blanchie ~r~$%s~s~",
+  ['moneywash_title'] = "Blanchiement",
+  ['moneywash_wash'] = "Blanchir tout l'argent sale.",
+  ['moneywash_prompt'] = "appuyez sur ~INPUT_CONTEXT~ pour ~r~Blanchir~s~.",
+  
+  -- blips
+  ['blip_weedfield'] = "Champ de Weed",
+  ['blip_weedprocessing'] = "Traitement : Weed",
+  ['blip_HydrochloricAcidFarm'] = "Acide Hydrochloric",
+  ['blip_SulfuricAcidFarm'] = "Acide Sulfuric",
+  ['blip_SodiumHydroxideFarm'] = "Hydroxide de Sodium",
+  ['blip_ChemicalsFarm'] = "Produits chimiques",
+  ['blip_ChemicalsProcessing'] = "Traitement : Produits chimiques",
+  ['blip_CokeFarm'] = "Champ de Coca",
+  ['blip_Cokeprocessing'] = "Traitement : Coke",
+  ['blip_lsdprocessing'] = "Traitement : LSD",
+  ['blip_thionylchlorideprocessing'] = "Traitement : Chlorure de thionyle",
+  ['blip_heroinfield'] = "Champ de Pavot",
+  ['blip_heroinprocessing'] = "Traitement : Héroïne",
+  ['blip_licenseshop'] = "Licenses",
+  ['blip_moneywash'] = "Blanchiement",
+  ['blip_methprocessing'] = "Traitement : Meth",
+  ['blip_drugdealer'] = "Dealer de drogue",
+}
